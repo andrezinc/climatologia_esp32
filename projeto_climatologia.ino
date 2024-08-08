@@ -18,7 +18,7 @@ char temp[50];
 char umid[50];
 WiFiClient Esp;
 PubSubClient cliente(Esp);
-void conexao_mqtt() {
+void conexao_mqtt() { // Função responsavel pela conexão
     while (!cliente.connected()) {
         Serial.print("Tentando conexão com mqtt");
         String clienteId = "ESP32_";
@@ -40,7 +40,7 @@ void conexao_mqtt() {
     }
 }
 
-void retorno_mensagem(char* topic, byte* payload, unsigned int length) {
+void retorno_mensagem(char* topic, byte* payload, unsigned int length) { //função responsável pela inscrição dos topicos
     Serial.print("Mensagem do topico [");
     Serial.print(topic);
     Serial.print("]:");
@@ -52,7 +52,7 @@ void retorno_mensagem(char* topic, byte* payload, unsigned int length) {
     }
     Serial.println();
 }
-void configuracao_wifi() {
+void configuracao_wifi() { //função para configurar o wifi
     WiFi.begin(ssid_wifi, senha_wifi);
     while (WiFi.status() != WL_CONNECTED) {
         delay(500);
@@ -61,7 +61,7 @@ void configuracao_wifi() {
     Serial.println("conectou");
 
 }
-void send_m(float h, float t) {
+void send_m(float h, float t) { //função para enviar a mensagem nos topico umid e temp 
     umid_str = String((String)h );
     temp_str = String((String)t );
 
@@ -70,14 +70,14 @@ void send_m(float h, float t) {
     cliente.publish("Climatologia/feeds/umid", umid);
     cliente.publish("Climatologia/feeds/temp", temp);
 }
-void setup() {
+void setup() { // ativação das funções padrões 
   Serial.begin(9600);
   configuracao_wifi();
   cliente.setServer(mqtt_server, 1883);
   cliente.setCallback(retorno_mensagem);
   dht.begin();
 }
-void loop() {
+void loop() { //leitura e reconexão com mqtt sempre que desconectado 
   if (!cliente.connected()) {
     conexao_mqtt();
   }
@@ -98,6 +98,3 @@ void loop() {
     ESP.restart();
   }
 }
-
-
-
