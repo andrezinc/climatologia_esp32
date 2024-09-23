@@ -1,6 +1,6 @@
 ## Clima Urbano UFPR
 
-O projeto **Clima Urbano UFPR** é uma solução para monitoramento e análise de condições climáticas urbanas utilizando um microcontrolador ESP32. Este projeto foi desenvolvido para um projeto de climatologia na Universidade Federal do Paraná (UFPR) e integra vários componentes para fornecer dados precisos sobre o clima.
+O projeto **Clima Urbano UFPR** feito em conjunto com Gabriela Freire Portugal e Izabela Scremin, é uma solução para monitoramento e análise de condições climáticas urbanas utilizando um microcontrolador ESP32. Este projeto foi desenvolvido para um projeto de climatologia na Universidade Federal do Paraná (UFPR) e integra vários componentes para fornecer dados precisos sobre o clima.
 
 ### Descrição
 
