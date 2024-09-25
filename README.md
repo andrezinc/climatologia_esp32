@@ -25,5 +25,5 @@ O sistema é composto por um microcontrolador ESP32, que coleta dados de um sens
 3. **Deploy**: Carregue o código no ESP32 e ajuste as configurações do broker MQTT para começar a receber os dados.
 
 ### Algumas imagens dos dados registrados em diferentes localidades de curitiba 
-[Imagem 1](Medição_andre.png)
-[Imagem 2](Medição_Gabi.png)
+![Imagem 1](Medição_andre.png)
+![Imagem 2](Medição_Gabi.png)
