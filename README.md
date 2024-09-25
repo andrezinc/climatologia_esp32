@@ -24,3 +24,6 @@ O sistema é composto por um microcontrolador ESP32, que coleta dados de um sens
 2. **Configuração do Software**: Configure o ambiente de desenvolvimento para o ESP32 e instale as bibliotecas necessárias para o MQTT e o sensor DHT11.
 3. **Deploy**: Carregue o código no ESP32 e ajuste as configurações do broker MQTT para começar a receber os dados.
 
+### Algumas imagens dos dados registrados em diferentes localidades de curitiba 
+[Imagem 1](Medição_andre.png)
+[Imagem 2](Medição_Gabi.png)
